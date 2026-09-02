@@ -146,6 +146,7 @@ int main(){
 
 //ARRAYS AND STRINGS
 
+/*
 #include <iostream>
 using namespace std;
 int main(){
@@ -153,14 +154,96 @@ int main(){
     for(int i=0;i<6;i++){
         cin>>arr[i] ;
     }
-    cout<<"Hello kitty !";
+    cout<<"Hello kitty your array is here -> ";
+    arr[3]=arr[3]*2;
+    arr[5]=arr[5]+10;
     for(int i=0;i<6;i++){
+       
+    
+           
+        
+       
         cout<<arr[i]<<" ";
     }
     return 0;
 
 }
+*/
+
+// 2D ARRAY
+
+/*
+#include <iostream>
+using namespace std;
+int main(){
+    int arr[4][5];
+    for (int i=0; i<4; i++){
+        for (int j=0; j<5; j++){
+            cin>>arr[i][j];
+        }
+    }
+    cout<<"Hello kitty your 2D array is here -> ";
+    for (int i=0; i<4; i++){
+        for (int j=0; j<5; j++){
+            cout<<arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+*/
 
 
+//functions in c++
+/*
+#include <iostream>
+using namespace std;
 
 
+int minn(int num1, int num2){
+    if(num1<=num2){
+        return num1;
+    }
+   
+}
+
+int main(){
+    int num1,num2;
+    cin>>num1>>num2;
+
+    int minimum=minn(num1,num2);
+    cout<<"The minimum number is "<<minimum;
+    return 0;
+
+}
+*/
+
+
+// Functions are used to modularise code
+// Functions are used to increase readability
+// Functions are used to use same code multiple times
+// void -> which does not returns anything
+// return
+// parameterised
+// non parameterised
+
+// pass by reference
+#include <iostream>
+using namespace std;
+void doSomething(int arr[], int n) {
+    arr[0] += 100;
+    cout << "Value inside function: " << arr[0] << endl;
+}
+int main() {
+    int n = 5;
+    int arr[n];
+    for(int i = 0; i<n; i = i + 1) {
+        cin >> arr[i];
+    }
+
+    doSomething(arr, n);
+
+    cout << "Value inside int main: " << arr[0] << endl;
+    return 0;
+}
